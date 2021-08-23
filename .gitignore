@@ -1,0 +1,17 @@
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media
+
+# Python # 
+*.py[cod] 
+*$py.class 
+
+# Visual Studio Code # 
+.vscode/*
+
+# Node
+theme/static_src/src/node_modules
