@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+{% block title %}Regattas{% endblock %}
+
+{% block content %}
+<div class="py-12">
+    <h2 class="font-extrabold text-5xl">Regattas</h2>
+</div>
+
+<div class="py-12 text-center">
+    <table class="table-fixed">
+        <thead>
+            <tr>
+                <th class="w-1/3">Date</th>
+                <th class="w-1/3">Regatta</th>
+                <th class="w-1/3">Club</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for regatta in regattas %}
+            <tr>
+                <td>{{ regatta.date }}</td>
+                <td>{{ regatta.name }}</td>
+                <td>{{ regatta.club.abbreviation }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
