@@ -1,4 +1,6 @@
 {% extends "header.html" %}
+{% load duration %}
+
 {% block title %}Regattas{% endblock %}
 
 {% block content %}
@@ -49,8 +51,8 @@
                 <td>{{ result.sail_number }}</td>
                 <td>{{ result.name }}</td>
                 <td>{{ result.end_time }}</td>
-                <td>{{ result.racing_time }}</td>
-                <td>{{ result.handicap_time }}</td>
+                <td>{{ result.racing_time | duration}}</td>
+                <td>{{ result.handicap_time | duration}}</td>
             </tr>
             {% endfor %}
         </tbody>
